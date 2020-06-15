@@ -1,0 +1,20 @@
+{
+  "name": "velocity-design-system-html",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "Design System For Velocity - Html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Velocity Corp.",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "less": "^3.11.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-modules": "^2.0.0"
+  }
+}
