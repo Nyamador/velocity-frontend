@@ -1,1 +1,0 @@
-{"version":3,"sources":["css\\css\\button.less"],"names":[],"mappings":"AAAA,UACI,WAAA,CACA,mBAAA,CAAA,mBAAA,CAAA,YAAA,CACA,6BAAA,CAAA,4BAAA,CAAA,sBAAA,CAAA","file":"index.css","sourceRoot":"..","sourcesContent":[".f{\n    color: wheat;\n    display: flex;\n    flex-direction: row;\n}"]}

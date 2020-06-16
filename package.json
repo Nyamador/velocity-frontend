@@ -1,20 +1,30 @@
 {
-  "name": "velocity-design-system-html",
-  "version": "0.0.1",
-  "private": "true",
-  "description": "Design System For Velocity - Html",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Velocity Corp.",
-  "license": "ISC",
-  "devDependencies": {
-    "cssnano": "^4.1.10",
-    "less": "^3.11.3"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.8.0",
-    "postcss-modules": "^2.0.0"
-  }
+	"name": "velocity-design-system-html",
+	"version": "0.0.1",
+	"private": "true",
+	"description": "Design System For Velocity - Html",
+	"main": "index.js",
+	"scripts": {
+		"webpack:prod": "webpack --mode production",
+		"watch": "webpack --mode development --watch",
+		"prestart": "webpack --mode development",
+		"start": "webpack-dev-server --open"
+	},
+	"author": "Velocity Corp.",
+	"license": "MIT",
+	"devDependencies": {
+		"autoprefixer": "^9.8.0",
+		"html-webpack-plugin": "^4.3.0",
+		"postcss-loader": "^3.0.0",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"dependencies": {
+		"css-loader": "^3.6.0",
+		"file-loader": "^6.0.0",
+		"less-loader": "^6.1.1",
+		"mini-css-extract-plugin": "^0.9.0",
+		"style-loader": "^1.2.1",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11"
+	}
 }
