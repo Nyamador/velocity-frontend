@@ -1,4 +1,4 @@
-import '../less/main.less';
+import './styles/main.less';
 
 
-console.log("Parcek")
+console.log("Parcel")
