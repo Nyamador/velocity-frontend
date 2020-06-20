@@ -6,14 +6,18 @@
 		url('./fonts/GTWalsheimPro-Regular.ttf') format('truetype'),
 		url('./fonts/GTWalsheimPro-Regular.eot?#iefix')
 			format('embedded-opentype');
-	font-weight: normal;
-	font-style: normal;
 }
 
 @vds-tight-spacing: 20px;
 @vds-normal-spacing: 24px;
 @vds-large-spacing: 32px;
 @vds-huge-spacing: 40px;
+
+@vds-weight-bold: 700px;
+@vds-weight-medium: 500px;
+@vds-weight-regular: 400px;
+@vds-weight-light: 300px;
+@vds-weight-xlight: 200px;
 
 :root {
 	--vds-black: @vds-black;
@@ -82,7 +86,21 @@
 	--vds-tight-spacing: @vds-tight-spacing;
 	--vds-normal-spacing: @vds-normal-spacing;
 	--vds-large-spacing: @vds-large-spacing;
-	--v--ds-huge-spacing: @vds-huge-spacing;
+	--vds-huge-spacing: @vds-huge-spacing;
+	--vds-text-huge: @vds-text-huge;
+	--vds-text-xxl: @vds-text-xxl;
+	--vds-text-xxl: @vds-text-xxl;
+	--vds-text-xl: @vds-text-xl;
+	--vds-text-l: @vds-text-l;
+	--vds-text-m: @vds-text-m;
+	--vds-text-s: @vds-text-s;
+	--vds-text-xs: @vds-text-xs;
+	--vds-copyright-text: @vds-copyright-text;
+	--vds-weight-bold: @vds-weight-bold;
+	--vds-weight-medium: @vds-weight-medium;
+	--vds-weight-regular: @vds-weight-regular;
+	--vds-weight-light: @vds-weight-light;
+	--vds-weight-xlight: @vds-weight-xlight;
 }
 
 body {
@@ -190,7 +208,6 @@ h6,
 p,
 ul {
 	margin: 0;
-	font-weight: 400;
 }
 
 .col {
