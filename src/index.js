@@ -1,4 +1,4 @@
 import './styles/main.less';
 
 
-console.log("Parcel")
+const as = () => console.log("Finally!")

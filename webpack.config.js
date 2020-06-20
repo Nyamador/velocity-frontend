@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 webpackConfig = {
 	entry: './src/index.js',
@@ -29,6 +30,28 @@ webpackConfig = {
 		}),
 		new CleanWebpackPlugin(),
 		new OptimizeCssAssetsPlugin(),
+		new WorkboxPlugin.GenerateSW({
+			// Do not precache images
+			exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+			runtimeCaching: [
+				{
+					urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+					handler: 'CacheFirst',
+
+					options: {
+						// custom cache name
+						cacheName: 'vds-cache-v1',
+
+						// cache only 10 images
+						expiration: {
+							maxEntries: 10,
+						},
+					},
+				},
+			],
+		}),
 	],
 	module: {
 		rules: [
@@ -56,6 +79,11 @@ webpackConfig = {
 						name: 'fonts/[name].[ext]',
 					},
 				},
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
 			},
 		],
 	},
