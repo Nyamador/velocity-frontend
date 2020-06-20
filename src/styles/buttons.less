@@ -31,7 +31,7 @@
 	background-color: @vds-blue-600;
 	color: @vds-white;
 	font-weight: 700;
-    letter-spacing: .5px;
+	letter-spacing: 0.5px;
 
 	&:hover {
 		background-color: @vds-blue-700;
@@ -39,51 +39,59 @@
 }
 
 .btn-orange {
-    .base-button();
-    background-color: @vds-orange-600;
+	.base-button();
+	background-color: @vds-orange-600;
 
 	&:hover {
 		background-color: @vds-orange-700;
-	}    
+	}
 }
 
-.btn-yellow{
-    .base-button();
-    background-color: @vds-yellow-600;
+.btn-yellow {
+	.base-button();
+	background-color: @vds-yellow-600;
 
 	&:hover {
 		background-color: @vds-yellow-700;
-	}    
+	}
 }
 
-.btn-black{
-    .base-button();
+.btn-black {
+	.base-button();
 	background-color: @vds-black;
 	color: @vds-white;
 
 	&:hover {
 		background-color: @vds-neutral-500;
-	}    
+	}
 }
 
+.btn-disabled {
+	.base-button();
+	background-color: @vds-neutral-400;
+	cursor: not-allowed;
+	color: @vds-neutral-200;
+	transition: none;
 
-.base-link{
-    padding: 12px;
-    height: 40px;
-
-    &:focus{
-        border: 1px solid @vds-blue-100;
-        border-radius: 4px;
-    }
-
-    &:hover{
-        color: @vds-blue-100;
-        background-color: @vds-neutral-200;
-        border-radius: 20px;
-        border-color: transparent;
-    }
+	&:hover {
+		transform: none;
+	}
 }
 
-.link{
-    .base-link()
+.base-link {
+	padding: 12px;
+
+	&:focus {
+		border-radius: 4px;
+	}
+
+	&:hover {
+		background-color: @vds-neutral-200;
+		border-radius: 6px;
+		border-color: none;
+	}
+}
+
+.vds-link {
+	.base-link();
 }

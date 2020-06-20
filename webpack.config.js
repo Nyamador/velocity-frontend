@@ -30,28 +30,28 @@ webpackConfig = {
 		}),
 		new CleanWebpackPlugin(),
 		new OptimizeCssAssetsPlugin(),
-		new WorkboxPlugin.GenerateSW({
-			// Do not precache images
-			exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+		// new WorkboxPlugin.GenerateSW({
+		// 	// Do not precache images
+		// 	exclude: [/\.(?:png|jpg|jpeg|svg)$/],
 
-			runtimeCaching: [
-				{
-					urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+		// 	runtimeCaching: [
+		// 		{
+		// 			urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
-					handler: 'CacheFirst',
+		// 			handler: 'CacheFirst',
 
-					options: {
-						// custom cache name
-						cacheName: 'vds-cache-v1',
+		// 			options: {
+		// 				// custom cache name
+		// 				cacheName: 'vds-cache-v1',
 
-						// cache only 10 images
-						expiration: {
-							maxEntries: 10,
-						},
-					},
-				},
-			],
-		}),
+		// 				// cache only 10 images
+		// 				expiration: {
+		// 					maxEntries: 10,
+		// 				},
+		// 			},
+		// 		},
+		// 	],
+		// }),
 	],
 	module: {
 		rules: [
